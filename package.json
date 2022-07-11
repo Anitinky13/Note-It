@@ -1,0 +1,24 @@
+{
+  "name": "note-it",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anitinky13/Note-It.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anitinky13/Note-It/issues"
+  },
+  "homepage": "https://github.com/Anitinky13/Note-It#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "inquirer": "^8.0.0",
+    "uuid": "^8.3.2"
+  }
+}
