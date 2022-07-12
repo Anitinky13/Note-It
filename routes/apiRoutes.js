@@ -1,7 +1,6 @@
 const fs = require("fs");
-const { dirname } = require("path");
 const path = require("path");
-const getNotes = require("../db/db.json");
+const getNotes = require("db/db.json");
 console.log(process.pid);
 
 //request notes
@@ -10,7 +9,7 @@ module.exports = function (app) {
   function writeData(notes) {
     notes = JSON.stringify(notes);
     console.log(notes);
-    fs.writeFilySync("./db/db.json", notes, function (err) {
+    fs.writeFilySync("db/db.json", notes, function (err) {
       if (err) {
         return console.log(err);
       }
