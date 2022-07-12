@@ -1,19 +1,24 @@
 const fs = require("fs");
 const path = require("path");
-const getNotes = require("db/db.json");
-console.log(process.pid);
+const getNotes = require("../db/db.json");
 
 //request notes
 module.exports = function (app) {
   //take json array to db.json
   function writeData(notes) {
-    notes = JSON.stringify(notes);
-    console.log(notes);
-    fs.writeFilySync("db/db.json", notes, function (err) {
-      if (err) {
-        return console.log(err);
+    console.table(notes);
+    console.log(__dirname);
+    //     let newNotes = getNotes.push(notes);
+    //     console.log(newNotes);
+    fs.writeFile(
+      path.join(__dirname, "../db/db.json"),
+      JSON.stringify(notes),
+      function (err) {
+        if (err) {
+          return console.log(err);
+        }
       }
-    });
+    );
   }
   app.get("/api/notes", function (req, res) {
     res.json(getNotes);
@@ -64,6 +69,7 @@ module.exports = function (app) {
   }
   //delete /api/notes/:id should receive a query parameter containing the id of a note to deleteNote.
   app.delete("/api/notes/:id", (req, res) => {
+    console.table(req.params);
     let id = req.params.id.toString();
     for (i = 0; i < getNotes.length; i++) {
       if (getNotes[i].id == id) {
