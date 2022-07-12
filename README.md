@@ -6,7 +6,11 @@ To create an application that is accessible to people that want to keep track of
 "AS a small business owner I WANT to be able to write and save notes
 SO THAT I can organize my thoughts and keep track of tasks I need to complete.
 
-## Table of Contents (Optional)
+## Table of Contents 
+(Optional)<img width="1355" alt="start" src="https://user-images.githubusercontent.com/104174334/178602865-1d24c2e3-96a6-4ad4-82a4-642b054777ad.png">
+<img width="1356" alt="notes" src="https://user-images.githubusercontent.com/104174334/178602898-6123d1e3-a328-4dbb-910f-65dab6b867a3.png">
+<img width="1340" alt="addnotes" src="https://user-images.githubusercontent.com/104174334/178602901-a6927940-52be-45df-afce-7ef7b039a26b.png">
+
 
 - [Installation](#installation)
 - [Usage](#usage)
