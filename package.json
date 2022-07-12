@@ -18,7 +18,10 @@
   "homepage": "https://github.com/Anitinky13/Note-It#readme",
   "dependencies": {
     "express": "^4.18.1",
+    "fs": "^0.0.1-security",
     "inquirer": "^8.0.0",
+    "path": "^0.12.7",
+    "store": "^2.0.12",
     "uuid": "^8.3.2"
   }
 }
