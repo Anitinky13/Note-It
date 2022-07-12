@@ -16,7 +16,7 @@ module.exports = (app) => {
   });
   //Get api notes should read the db.json file and return all saved notes as json.
   app.get("/notes", (req, res) => {
-    res.sendFile(path.join(__dirname, "/db/db.json"));
+    res.sendFile(path.join(__dirname, "./db/db.json"));
   });
 
   app.get("*", (req, res) => {
@@ -46,7 +46,7 @@ module.exports = (app) => {
     let deleteNotes = db.filter((item) => item.id !== req.params.id);
     //file system to writeFile//rewriting to db.json
     fs.writeFileSync(
-      "./db/db.json",
+      "/db/db.json",
       JSON.stringify(deleteNotes),
       (err, data) => {
         res.json(deleteNotes);

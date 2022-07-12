@@ -21,21 +21,27 @@
 // });
 //dependencies
 const express = require("express");
-//heroku port
-const PORT = process.env.PORT || 3000;
-//file system
-const fs = require("fs");
 //path
 const path = require("path");
 //express
 const app = express();
+//heroku port
+const PORT = process.env.PORT || 3000;
+app.use(express.json());
 //const router = require("express").Router();
 app.use(express.urlencoded({ extended: true }));
+require("./routes/apiRoutes.js")(app);
+require("./routes/htmlRoutes.js")(app);
+//EXPRESS calls to handle data
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+//file system
+// const fs = require("fs");
+
 app.use(express.static("public"));
-const apiRoutes = require("./routes/apiRoutes");
-const htmlRoutes = require("./routes/htmlRoutes");
+// const apiRoutes = require("./routes/apiRoutes");
+// const htmlRoutes = require("./routes/htmlRoutes");
 //to listen to the port
-app.listen(PORT, () => {
+app.listen(PORT, function () {
   console.log(`App listening on PORT: ${PORT}`);
 });
