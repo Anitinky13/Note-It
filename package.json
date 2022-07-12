@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,8 @@
     "fs": "^0.0.1-security",
     "inquirer": "^8.0.0",
     "path": "^0.12.7",
-    "store": "^2.0.12",
+    "node": "^17.7.2",
     "uuid": "^8.3.2"
-  }
+  },
+  "devDependencies": {}
 }
